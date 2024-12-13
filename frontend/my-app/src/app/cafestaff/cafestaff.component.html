@@ -1,0 +1,36 @@
+
+
+<h1>Staff details</h1>
+<div class="menu-container">
+    <div class="menu-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>staffId</th>
+                    <th>name</th>
+                    <th>role</th>
+                    <th>phoneNumber</th>
+                    <th>email</th>
+                    <th>staffTiming</th>
+                    <th>salary</th>
+                    <th>dateJoined</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let staffDetail of staffDetails">
+                    <td>{{ staffDetail.staffId }}</td>
+                    <td>{{ staffDetail.name }}</td>
+                    <td>{{ staffDetail.role }}</td>
+                    <td>{{ staffDetail.phoneNumber }}</td>
+                    <td>{{ staffDetail.email }}</td>
+                    <td>{{ staffDetail.shiftTiming }}</td>
+                    <td>{{ staffDetail.salary }}</td>
+                    <td>{{ staffDetail.dateJoined }}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-info"(click)="navigateToHome()">Back To Home</button>
+    </div>
+</div>
+  

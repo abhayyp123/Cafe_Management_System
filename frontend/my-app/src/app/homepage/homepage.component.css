@@ -1,0 +1,103 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("https://wallpapercave.com/wp/wp4254882.jpg"); /* Replace with a valid image URL */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Dashboard container */
+.dashboard-container {
+  background: rgba(0, 0, 0, 0.6); /* Add a semi-transparent overlay */
+  border-radius: 15px;
+  padding: 40px 20px;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/* Header styling */
+.dashboard-container h1 {
+  font-size: 3em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Card container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Makes cards responsive */
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+/* Individual card styling */
+.card {
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background */
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  min-height: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-10px); /* Elevates the card on hover */
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4); /* Adds a glow effect */
+}
+
+/* Card heading */
+.card h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Card description */
+.card p {
+  font-size: 1em;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .card {
+    width: 100%; /* Cards stack on smaller screens */
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container h1 {
+    font-size: 2em;
+  }
+
+  .card h2 {
+    font-size: 1.5em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+  }
+}

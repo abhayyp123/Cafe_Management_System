@@ -1,0 +1,106 @@
+
+<h1>Payment</h1>
+<div class="payment-container">
+  <p><strong>Total Amount: </strong>{{ totalAmount | currency }}</p>
+
+  <!-- Payment options form -->
+  <form #paymentForm="ngForm" (submit)="processPayment0()">
+    <div class="form-group">
+      <label for="paymentOption">Select Payment Option</label>
+      <select id="paymentOption" (change)="optionChange($event)"   class="form-control">
+        <option value="creditCard">Credit Card</option>
+        <option value="paypal">PayPal</option>
+        <option value="debit card"> Debit Card</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Select</button>
+  </form>
+</div>
+
+
+<div class="payment-container">
+  <!-- <p><strong>Total Amount: </strong>{{ totalAmount | currency }}</p> -->
+
+  <!-- Payment options form -->
+   <div *ngIf="creditOption">
+  <form #paymentForm="ngForm" (submit)="processPayment('creditCard')">
+    <div class="form-group">
+      <label for="CardHolder">CardHolder's Name</label>
+      <input type="text" id="CardHolder" name="CardHolder"  [(ngModel)]="payment.cardHodler" required/><br> <br/>
+      <label for="cardnumber">Card Number</label>
+      <input type="text" id="cardnumber" name="cardnumber"  [(ngModel)]="payment.cardNumber" 
+      minlength="16" 
+      maxlength="16" 
+      required 
+      placeholder="Enter your Card Number" 
+      title="Password must be at least 16 characters long"
+      #cardNumber="ngModel"
+      /><!-- Validation Message -->
+      <div *ngIf="cardNumber.invalid && cardNumber.touched" class="error" style="color: red;">
+        Card Number must be at least 16 characters long.
+      </div>
+      <br> <br/>
+      <label for="ExpirationDate">Expiration Date</label>
+      <input type="text" id="ExpirationDate" name="ExpirationDate"  [(ngModel)]="payment.expirationDate" required/><br> <br/>
+      
+      <label for="pin">CVV</label>
+      <input type="text" id="pin" name="pin"  [(ngModel)]="payment.cvv" required/><br> <br/>
+    </div>
+
+    <button type="submit" class="btn btn-success" [disabled]="">Pay Now</button>
+  </form>
+</div>
+</div>
+
+
+<div class="payment-container">
+  <div *ngIf="paypal">
+    <form #paymentForm="ngForm" (submit)="processPayment1('PayPal')">
+      <div class="form-group">
+        <label for="phonenum">Phone Number</label>
+        <input type="tel" id="phonenum" name="phonenum"   [(ngModel)]="payment.phoneNumber" required/><br> <br/>
+        
+      </div>
+  
+      <button type="submit" class="btn btn-success">Pay Now</button>
+    </form>
+  </div>
+  </div>
+
+
+
+<div class="payment-container">
+  <!-- <p><strong>Total Amount: </strong>{{ totalAmount | currency }}</p> -->
+
+  <!-- Payment options form -->
+   <div *ngIf="debit">
+  <form #paymentForm="ngForm" (submit)="processPayment2('DebitCard')">
+    <div class="form-group">
+      <label for="CardHolder">CardHolder's Name</label>
+      <input type="text" id="CardHolder" name="CardHolder"  [(ngModel)]="payment.cardHodler" required/><br> <br/>
+      <label for="cardnumber"> Card Number</label>
+      <input type="text" id="cardnumber" name="cardnumber"  [(ngModel)]="payment.cardNumber" 
+      minlength="16" 
+      maxlength="16" 
+      required 
+      placeholder="Enter your Card Number" 
+      title="Card Number must be at least 16 characters long"
+      #cardNumber="ngModel"
+      /><!-- Validation Message -->
+      <div *ngIf="cardNumber.invalid && cardNumber.touched" class="error" style="color: red;">
+        Card Number must be at least 16 characters long.
+      </div>
+      <br> <br/>
+      <label for="ExpirationDate">Expiration Date</label>
+      <input type="text" id="ExpirationDate" name="ExpirationDate"  [(ngModel)]="payment.expirationDate" required /><br> <br/>
+      
+      <label for="pin">CVV</label>
+      <input type="text" id="pin" name="pin"   [(ngModel)]="payment.cvv" required/><br> <br/>
+    </div>
+
+    <button type="submit" class="btn btn-success">Pay Now</button>
+  </form>
+</div>
+</div>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="com/example/demo/model/|com/example/demo/repository/|com/example/demo/service/|com/example/demo/serviceimpl/|com/example/demo/controller/" kind="src" path="CafeManagement/src/main/java"/>
+	<classpathentry kind="src" path="CafeManagement/src/main/java/com/example/demo/controller"/>
+	<classpathentry kind="src" path="CafeManagement/src/main/java/com/example/demo/model"/>
+	<classpathentry kind="src" path="CafeManagement/src/main/java/com/example/demo/repository"/>
+	<classpathentry kind="src" path="CafeManagement/src/main/java/com/example/demo/service"/>
+	<classpathentry kind="src" path="CafeManagement/src/main/java/com/example/demo/serviceimpl"/>
+	<classpathentry kind="src" path="CafeManagement/src/test/java"/>
+	<classpathentry kind="output" path="CafeManagement/target/classes"/>
+</classpath>

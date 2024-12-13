@@ -1,0 +1,43 @@
+
+<h1>Inventory</h1>
+<div class="menu-container">
+    <div class="menu-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>InventoryId</th>
+                    <th>StockLevel</th>
+                    <th>MinimumLevel</th>
+                    <th>reorderQuantity</th>
+                    <th>UnitCost</th>
+                    <th>ItemId</th>
+                    <th>ItemName</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Ingredients</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let inventorys of inventory">
+                    <td>{{ inventorys.inventoryId }}</td>
+                    <td>{{ inventorys.stockLevel }}</td>
+                    <td>{{ inventorys.minimumLevel }}</td>
+                    <td>{{ inventorys.reorderQuantity }}</td>
+                    <td>{{ inventorys.unitCost }}</td>
+                    <td>{{ inventorys.menuItem.itemId }}</td>
+                    <td>{{ inventorys.menuItem.itemName }}</td>
+                    <td>{{ inventorys.menuItem.category }}</td>
+                    <td>{{ inventorys.menuItem.description }}</td>
+                    <td>{{ inventorys.menuItem.price }}</td>
+                    <td>{{ inventorys.menuItem.ingredients }}</td>
+             
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-info"(click)="navigateToHome()">Back To Home</button>  
+    </div>
+</div>
+  

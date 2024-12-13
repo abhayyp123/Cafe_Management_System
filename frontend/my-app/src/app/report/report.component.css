@@ -1,0 +1,88 @@
+/* Container for the form */
+:host {
+  display: block; /* Ensure the component spans full width */
+  
+  height: 100vh;
+  background-image: url("https://img.freepik.com/premium-photo/there-is-white-flower-that-is-vase-generative-ai_900370-46206.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size:cover
+ 
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading styling */
+  h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input fields container */
+  div {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  label {
+    font-size: 16px;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Input field styling */
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  /* Address input styling */
+  input[type="address"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* Button disabled state */
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Focus state for input fields */
+  input:focus {
+    border-color: #4CAF50;
+    outline: none;
+  }
+  

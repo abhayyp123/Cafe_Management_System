@@ -1,0 +1,109 @@
+/* Payment Form Container Styling */
+:host {
+  display: block; /* Ensure the component spans full width */
+  
+  height: 100vh;
+  background-image: url("https://img.freepik.com/premium-photo/there-is-white-flower-that-is-vase-generative-ai_900370-46206.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size:cover
+ 
+}
+.payment-container {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="tel"],
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Button Styling */
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Select Dropdown */
+select.form-control {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .payment-container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  button[type="submit"] {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+  }
+}

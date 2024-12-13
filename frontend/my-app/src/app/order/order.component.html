@@ -1,0 +1,38 @@
+
+<h1>Orders Details</h1>
+<div class="menu-container">
+    <div class="menu-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>OrderID</th>
+                    <th>orderDate</th>
+                    <th>CustomerID</th>
+                    <th>ItemId</th>
+                    <th>Price</th>
+                    <!-- <th>ItemName</th>
+                    <th>Price</th> -->
+                    <!-- <th>totalAmount</th> -->
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let orders of order| paginate:{itemsPerPage:count,currentPage:page}">
+                    <td>{{ orders.orderId }}</td>
+                    <td>{{ orders.orderDate }}</td>
+                    <!-- <td>{{ orders.totalAmount }}</td> -->
+                    <td>{{ orders.customer.customerId }}</td>
+                    <td>{{ orders.menuItem.itemId }}</td>
+                    <!-- <td>{{ orders.menuItem.name }}</td>-->
+                     <td>{{ orders.menuItem.price }}</td> 
+                   
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-info"(click)="navigateToHome()">Back To Home</button>  
+       <pagination-controls (pageChange)="page=$event"></pagination-controls>
+    </div>
+</div>
+  
+

@@ -1,0 +1,87 @@
+
+
+<div class="container">
+    <h2>update Menu Item</h2>
+    <form #menuItemForm="ngForm" (ngSubmit)="onSubmit()">
+      <!-- Item Name -->
+      <div class="form-group">
+        <label for="itemName">Item Name:</label>
+        <input
+          type="text"
+          id="itemname"
+          name="itemname"
+          class="form-control"
+          [(ngModel)]="menuItem.itemName"
+          required
+        />
+      </div>
+  
+      <!-- Category -->
+      <div class="form-group">
+        <label for="category">Category:</label>
+        <input
+          type="text"
+          id="category"
+          name="category"
+          class="form-control"
+          [(ngModel)]="menuItem.category"
+          required
+        />
+      </div>
+  
+      <!-- Description -->
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          class="form-control"
+          [(ngModel)]="menuItem.description"
+          required
+        ></textarea>
+      </div>
+  
+      <!-- Price -->
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          class="form-control"
+          [(ngModel)]="menuItem.price"
+          min="0"
+          required
+        />
+      </div>
+  
+      
+      <!-- Ingredients -->
+      <div class="form-group">
+        <label for="ingredients">Ingredients:</label>
+        <input
+          type="text"
+          id="ingredients"
+          name="ingredients"
+          class="form-control"
+          [(ngModel)]="menuItem.ingredients"
+        />
+      </div>
+  
+      <!-- Availability
+      <div class="form-group">
+        <label for="isAvailable">Is Available:</label>
+        <input
+          type="checkbox"
+          id="isAvailable"
+          name="isAvailable"
+          [(ngModel)]="menuItem.isAvailable"
+        />
+      </div> -->
+  
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary"(click)="update(menuItem.itemId)">update Menu Item</button>
+    </form>
+    <button type="button" class="btn btn-info"(click)="navigateToHome()">Back To Home</button> 
+</div>
+  

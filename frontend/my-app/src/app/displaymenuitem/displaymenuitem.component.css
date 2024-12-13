@@ -1,0 +1,127 @@
+/* menu-list.component.css */
+
+/* Style for the overall container */
+.menu-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Make sure the container doesn't stretch too wide */
+  }
+  
+  .menu-body {
+    background-color: #f9f9f9; /* Light background color for the menu body */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for a more polished look */
+  }
+  
+  /* Style for the table */
+  table {
+    width: 100%; /* Make the table take up the entire width of its container */
+    border-collapse: collapse; /* Ensure borders are collapsed for a cleaner look */
+    margin-top: 20px; /* Add space above the table */
+  }
+  
+  /* Style for table headers */
+  th {
+    background-color: #4CAF50; /* Green background for header */
+    color: white; /* White text color for better contrast */
+    padding: 12px 20px; /* Add padding for spacing */
+    text-align: left; /* Align text to the left */
+    font-weight: bold;
+  }
+  
+  /* Style for table data (td) */
+  td {
+    padding: 12px 20px; /* Add padding for each cell */
+    text-align: left; /* Align text to the left */
+    border-bottom: 1px solid #ddd; /* Add a light border below each row */
+    font-size: 16px; /* Set a font size for readability */
+  }
+  
+  /* Style for alternating row colors (zebra striping) */
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+  }
+  
+  /* Style for available status */
+  td:last-child {
+    font-weight: bold; /* Make the 'isAvailable' column bold */
+  }
+  
+  td:last-child.true {
+    color: green; /* Green color for available items */
+  }
+  
+  td:last-child.false {
+    color: red; /* Red color for unavailable items */
+  }
+  
+  /* Add hover effect on rows */
+  tr:hover {
+    background-color: #ddd; /* Darken row on hover */
+  }
+  /* Styling the menu container */
+.menu-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Styling the table */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Styling the buttons */
+.btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Styling availability */
+.true {
+  color: green;
+}
+
+.false {
+  color: red;
+}
+
+/* Heading styling */
+h1 {
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
+}

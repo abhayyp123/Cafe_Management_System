@@ -1,0 +1,43 @@
+<h1>Menu Item Details</h1>
+<div class="menu-container">
+  <div class="menu-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Item ID</th>
+          <th>Item Name</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Ingredients</th>
+          <!-- <th>Availability</th> -->
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let menuitem of menuItems">
+          <td>{{ menuitem.itemId }}</td>
+          <td>{{ menuitem.itemName }}</td>
+          <td>{{ menuitem.category }}</td>
+          <td>{{ menuitem.description }}</td>
+          <td>{{ menuitem.price | currency }}</td>
+          <td>{{ menuitem.ingredients }}</td>
+          <!-- <td [ngClass]="{'true': menuitem.isAvailable, 'false': !menuitem.isAvailable}">
+            {{ menuitem.isAvailable ? 'Available' : 'Not Available' }}
+          </td> -->
+          <td><button type="button" class="btn btn-info" (click)="orderitem(menuitem.itemId)">Order</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Show total amount -->
+    <div class="order-summary">
+      <p><strong>Total Amount: </strong>{{ totalAmount | currency }}</p>
+    </div>
+
+    <div class="action-buttons">
+      <button type="button" class="btn btn-info" (click)="navigateToHome()">Back</button>
+      <button type="button" class="btn btn-info" (click)="navigatePayment()">Proceed to Payment</button>
+    </div>
+  </div>
+</div>

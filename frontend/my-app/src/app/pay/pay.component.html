@@ -1,0 +1,33 @@
+
+<h1>Payment Details</h1>
+<div class="menu-container">
+    <div class="menu-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>PaymentId</th>
+                   <th>CustomerID</th>
+                    <th>AccountType</th>
+                    <th>TotalAmount</th>
+                 
+                   
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let payments of payment">
+                    <td>{{ payments.paymentID }}</td>
+                    <td>{{ payments.customer.customerId }}</td>
+                    <td>{{ payments.accountType }}</td>
+                     <td>{{ payments.totalAmount }}</td> 
+                   
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-info"(click)="navigateToHome()">Back To Home</button>  
+       
+    </div>
+</div>
+  
+
+

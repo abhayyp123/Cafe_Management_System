@@ -1,0 +1,19 @@
+h1:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+    cursor: pointer; /* Changes cursor to pointer */
+}
+
+.heading-logo {
+    width: 50px; /* Adjust size of the logo */
+    height: 50px; /* Keep the logo square */
+    margin-right: 10px; /* Add spacing between logo and text */
+    border-radius: 50%; /* Optional: make the logo circular */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow around the logo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
+}
+
+.heading-logo:hover {
+    transform: scale(1.2); /* Slightly enlarge the logo on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhance shadow on hover */
+}

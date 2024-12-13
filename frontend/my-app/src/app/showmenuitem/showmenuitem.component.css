@@ -1,0 +1,89 @@
+/* General styles */
+:host {
+  display: block; /* Ensure the component spans full width */
+  
+  height: 100vh;
+  background-image: url("https://img.freepik.com/premium-photo/there-is-white-flower-that-is-vase-generative-ai_900370-46206.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size:cover
+ 
+}
+h1{
+  text-align: center;
+}
+.menu-container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-body {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Table styles */
+.table {
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Availability styles */
+.true {
+  color: green;
+  font-weight: bold;
+}
+
+.false {
+  color: red;
+  font-weight: bold;
+}
+
+/* Order summary */
+.order-summary {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* Action buttons */
+.action-buttons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.action-buttons .btn {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.btn-info {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  background-color: #0056b3;
+}

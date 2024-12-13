@@ -1,0 +1,39 @@
+
+<h1>MenuItem</h1>
+<div class="menu-container">
+    <div class="menu-body">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>itemId</th>
+                    <th>itemName</th>
+                    <th>category</th>
+                    <th>description</th>
+                    <th>price</th>
+                    <th>ingredients</th>
+                    <!-- <th>isAvailable</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let menuitem of menuItems|paginate:{itemsPerPage:count,currentPage:page}">
+                    <td>{{ menuitem.itemId }}</td>
+                    <td>{{ menuitem.itemName }}</td>
+                    <td>{{ menuitem.category }}</td>
+                    <td>{{ menuitem.description }}</td>
+                    <td>{{ menuitem.price }}</td>
+                    <td>{{ menuitem.ingredients }}</td>
+                    <!-- <td [ngClass]="{'true': menuitem.isAvailable, 'false': !menuitem.isAvailable}">
+                        {{ menuitem.isAvailable ? 'Available' : 'Not Available' }}
+                    </td> -->
+                    <td><button type="button" class="btn btn-info"(click)="updatemenuitem(menuitem.itemId)">Update</button></td> 
+                    <td> <button type="button" class="btn btn-danger"(click)="deletemenuitem(menuitem.itemId)">Delete</button> </td>
+        
+                </tr>
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-info"(click)="navigateToHome()">Back To Home</button>
+        <pagination-controls (pageChange)="page=$event"></pagination-controls>
+    </div>
+</div>
+  

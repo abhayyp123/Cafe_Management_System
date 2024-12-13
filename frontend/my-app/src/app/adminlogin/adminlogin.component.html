@@ -1,0 +1,23 @@
+
+<h2>Login</h2>
+<form #loginForm="ngForm" (ngSubmit)="onLogin()">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="admin.username" minlength="4" maxlength="40" />
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      [(ngModel)]="admin.password" 
+      minlength="7" 
+      maxlength="40" 
+      required 
+      placeholder="Enter your password" 
+      title="Password must be at least 7 characters long"
+    />
+  </div>
+  <button type="submit" [disabled]="loginForm.invalid">Login</button>
+</form>
